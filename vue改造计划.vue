@@ -32,7 +32,7 @@ export default {
             6.核销领奖,调用领取接口api,调用成功,修改stamp的class,并给予提示  
 
 
-    界面规划:index.html 入口
+    界面规划-组件化:index.html 入口
             <stamp></stamp> 戳组件
             <received></received> 接收组件       
 </style>
