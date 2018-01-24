@@ -3,9 +3,12 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>
-        index
+        微信手机端 适配页面测试
     </title>
+    <script src="asset/js/zepto.min.js"></script>
+    <!-- <script src="asset/js/sweetalert.min.js"></script> -->
     <style>
         * {
             margin: 0;
@@ -24,20 +27,16 @@
             vertical-align: middle;
         }
 
-        .container {
-            background-image: url('asset/RgPark/A.jpg');
-            background-size: 100% 100%;
+        .container img {
             width: 100vw;
-            /* 神一样的单位 */
             height: 100vh;
-            /* 神一样的单位 */
         }
 
         .stamp {
             position: absolute;
             top: 40vh;
             right: 10vw;
-
+            display: none;
         }
 
         .stamp img {
@@ -57,20 +56,32 @@
             font-size: 3.5vw;
         }
 
-        button {
+        .received button {
             width: 45vw;
             background-color: yellow;
-            border-radius: 3vw;
+            border-radius: 1vw;
             border-color: yellow;
             border-spacing: inherit;
             border-width: 0.1vw;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 6vh;
+            color: #fb0c03;
+            font-size: 4.5vw;
+        }
+
+        .alerttips button {
+            background-color: red;
+        }
+
+        .swal-overlay {
+            background-color: rgba(43, 165, 137, 0.45);
         }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <img src="asset/RgPark/A.jpg" alt="">
         <div class="stamp">
             <img src="asset/common/stamp-black.png" alt="">
         </div>
@@ -78,11 +89,32 @@
             <div class="tips">
                 (请找工作人员点击核销按钮)
             </div>
-            <button>
+            <button id="btn" type="button">
                 核销
             </button>
         </diV>
     </div>
 </body>
+
+<script>
+    Zepto(function ($) {
+
+        $("#btn").on('click', function () {
+            $(".stamp").show();
+            alert("恭喜您,领取成功");
+            // swal({
+            //     title: "领取成功!",
+            //     icon: "success",
+            //     button: true,
+            //     className: "red-bg",
+            //     timer: 2000,
+            // });            
+            $("#btn").css('background-color','rgb(119, 118, 118)');
+            $("#btn").css('border-color','rgb(119, 118, 118)');
+            $("#btn").attr('disabled','disabled');
+            $("#btn").off();
+        });
+    })
+</script>
 
 </html>
