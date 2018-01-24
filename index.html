@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>
+        index
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .container {
+            background-image: url('asset/RgPark/A.jpg');
+            background-size: 100% 100%;
+            width: 100vw;
+            /* 神一样的单位 */
+            height: 100vh;
+            /* 神一样的单位 */
+        }
+
+        .stamp {
+            position: absolute;
+            top: 40vh;
+            right: 10vw;
+
+        }
+
+        .stamp img {
+            width: 23vw;
+            height: 23vw;
+        }
+
+        .received {
+            position: absolute;
+            top: 63.5vh;
+            left: 28vw;
+        }
+
+        .received .tips {
+            color: aliceblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 3.5vw;
+        }
+
+        button {
+            width: 45vw;
+            background-color: yellow;
+            border-radius: 3vw;
+            border-color: yellow;
+            border-spacing: inherit;
+            border-width: 0.1vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="stamp">
+            <img src="asset/common/stamp-black.png" alt="">
+        </div>
+        <diV class="received">
+            <div class="tips">
+                (请找工作人员点击核销按钮)
+            </div>
+            <button>
+                核销
+            </button>
+        </diV>
+    </div>
+</body>
+
+</html>
